@@ -5,6 +5,8 @@ $(function() {
     let btn1=$('#btn1'); 
     let ul=document.getElementById("ul");
 
+     $('#inputItem').focus();
+
     //clear all items
     btn1.click(function(){
         ul.innerHTML='';
