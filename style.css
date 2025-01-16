@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&&family=Gabarito:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: 'gabarito', sans-serif;
+  /* font-family: 'gabarito', sans-serif; */
   list-style: none;
   color: white;
 }
@@ -31,12 +31,12 @@ body {
   font-size: 16px;
 }
 header h1 {
-  /* background-image: linear-gradient(60deg,#11998e,10%,#38ef7d); */
+  /* background-image: linear-gradient(60deg, #11998e, 10%, #38ef7d); */
   background-image: linear-gradient(45deg, #2980b9, #6dd5fa, #ffffff);
   color: transparent;
   -webkit-background-clip: text;
-
-  font-size: 3.1em;
+  font-family: 'gabarito', sans-serif;
+  font-size: 3em;
 }
 .mid {
   margin: 2vw auto;
@@ -57,18 +57,22 @@ header h1 {
   color: black;
   background-color: transparent;
   outline: none;
+  font-family: 'gabarito', sans-serif;
 }
 #btn {
   color: rgba(0, 0, 0, 0.792);
+  margin: 2px;
   width: 20%;
   font-size: 1.2em;
   padding: 0.9vw 30px;
   background-image: linear-gradient(45deg, #4ac29a, #bdfff3);
   border-radius: 30px;
   border: none;
+  font-family: 'gabarito', sans-serif;
 }
 #btn:hover {
   scale: calc(0.95);
+  cursor: pointer;
 }
 
 main {
@@ -76,6 +80,7 @@ main {
   height: calc(100vh - 59vh);
   overflow-y: scroll;
   overflow-wrap: break-word;
+  font-family: 'poppins', sans-serif !important;
 }
 /* for styling scrollbar */
 main::-webkit-scrollbar {
@@ -96,12 +101,13 @@ ul {
   position: relative;
 }
 li {
-  font-size: 1.8em;
-  line-height: 50px;
+  font-size: 1.5em;
+  line-height: 40px;
   position: relative;
   padding-left: 34px;
   padding-right: 60px;
   transition: 0.5s ease 0s;
+  text-align: justify;
 }
 ul li::before {
   content: '';
@@ -114,12 +120,16 @@ ul li::before {
   background-size: cover;
   background-position: center;
 }
+li:hover {
+  background-color: rgba(173, 216, 230, 0.191);
+  border-radius: 10px;
+}
 .active {
-  color: #888;
+  color: #a9f7e8;
   text-decoration: line-through;
 }
 .active span {
-  color: #bbb;
+  color: #c8f9f0;
 }
 
 .active::before {
@@ -132,7 +142,7 @@ li span {
   width: 30px;
   height: 30px;
   font-size: 1.8em;
-  color: #bbb;
+  color: #acdaeb;
   border-radius: 40px;
   transition: 1s ease 0s;
   display: flex;
@@ -142,11 +152,17 @@ li span {
 }
 #btn1 {
   float: right;
-  margin: 10px 0px;
   border: none;
-  background-color: transparent;
-  text-decoration: underline;
-  font-size: 1.2em;
+  margin: 7px 0px;
+  font-size: 1em;
+  padding: 7px 10px;
+  background-color: #2581a3d5;
+  border-radius: 10px;
+}
+#btn1:hover {
+  background-color: #b9d5df;
+  color: #2980b9;
+  cursor: pointer;
 }
 #msg {
   text-align: center;
@@ -162,23 +178,36 @@ li span {
   ul {
     cursor: auto;
   }
+  .mid {
+    width: 100%;
+  }
   main {
-    height: calc(100vh - 49vh);
+    /* height: calc(100vh - 49vh); */
+    font-size: 13px;
+  }
+  #btn1 {
+    font-size: 13px;
+  }
+  li span {
+    font-size: 25px;
   }
   #btn {
-    width: 23%;
-    padding: 9px;
+    margin: 4px;
+  }
+  #msg {
+    font-size: 1.2em;
   }
 }
 
 /* Responsive for mobile */
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   body {
     background-position: left;
   }
   .container {
-    margin-top: 39px;
-    padding: 22px;
+    margin-top: 22px;
+    width: 90%;
+    padding: 25px;
   }
   header h1 {
     font-size: 2.3em;
@@ -187,7 +216,7 @@ li span {
   .mid {
     margin: 13px auto;
     width: 100%;
-    font-size: 14px;
+    font-size: 11px;
   }
   .mid input {
     padding-left: 20px;
@@ -196,15 +225,26 @@ li span {
   #btn {
     width: 30%;
     padding: 4.8px;
+    margin: 2px;
   }
   ul {
     cursor: auto;
   }
   ul li {
-    font-size: 1.69em;
+    font-size: 1em;
+    line-height: normal;
     padding-left: 29px;
+    text-align: left;
+    /* border: 2px solid rgba(255, 255, 255, 0.2); */
+    margin: 13px 0px;
+  }
+  ul li::before {
+    top: 0px;
   }
   #msg {
-    font-size: 1.38em;
+    font-size: 1em;
+  }
+  li span {
+    font-size: 1.5em;
   }
 }
