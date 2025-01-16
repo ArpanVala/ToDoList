@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   list-style: none;
   color: white;
 }
@@ -16,29 +16,28 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
 }
 .container {
- /* From https://css.glass */
-background: rgba(255, 255, 255, 0.08);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(16.7px);
--webkit-backdrop-filter: blur(16.7px);
-border: 1px solid rgba(255, 255, 255, 0.2);
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(16.7px);
+  -webkit-backdrop-filter: blur(16.7px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   width: 80%;
   margin: 4vw auto;
   padding: 2.5em 1.5em 2em 4em;
   font-size: 16px;
 }
-header h1{
+header h1 {
+  /* background-image: linear-gradient(60deg,#11998e,10%,#38ef7d); */
+  background-image: linear-gradient(45deg, #2980b9, #6dd5fa, #ffffff);
+  color: transparent;
+  -webkit-background-clip: text;
 
-    /* background-image: linear-gradient(60deg,#11998e,10%,#38ef7d); */
-    background-image: linear-gradient(45deg,#2980B9,#6DD5FA,#FFFFFF);
-    color: transparent;
-    -webkit-background-clip: text;
-
-    font-size: 3.1em;}
+  font-size: 3.1em;
+}
 .mid {
   margin: 2vw auto;
   width: 75%;
@@ -46,7 +45,7 @@ header h1{
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  border-radius:30px;
+  border-radius: 30px;
   padding: 0px;
 }
 .mid input {
@@ -63,139 +62,145 @@ header h1{
   width: 20%;
   font-size: 1.7em;
   padding: 0.9vw 30px;
-  background-image: linear-gradient(45deg,#4AC29A,#BDFFF3);
+  background-image: linear-gradient(45deg, #4ac29a, #bdfff3);
   border-radius: 30px;
-  border:none;
+  border: none;
 }
 
-main{
-    width: 100%;
-    height:calc(100vh - 59vh);
-    overflow-y: scroll;
-    overflow-wrap:break-word;
+main {
+  width: 100%;
+  height: calc(100vh - 59vh);
+  overflow-y: scroll;
+  overflow-wrap: break-word;
 }
 /* for styling scrollbar */
 main::-webkit-scrollbar {
-    width: 5px;               /* width of the entire scrollbar */
-  }
-  
-  main::-webkit-scrollbar-track {
-      background: #ddd;        /* color of the tracking area */
-      border-radius: 20px;
-    }
-    
-    main::-webkit-scrollbar-thumb {
-    background-color: #888;    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-  }
+  width: 5px; /* width of the entire scrollbar */
+}
+
+main::-webkit-scrollbar-track {
+  background: #ddd; /* color of the tracking area */
+  border-radius: 20px;
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: #888; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
 ul {
   cursor: pointer;
   position: relative;
 }
 li {
   font-size: 1.8em;
-  line-height: 40px;
+  line-height: 50px;
   position: relative;
   padding-left: 34px;
   padding-right: 60px;
   transition: 0.5s ease 0s;
 }
-ul li::before{
-    content:"";
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    top: 11px;
-    left: 0px;
-    background-image:url(img/i8.png);
-    background-size: cover;
-    background-position: center;
+ul li::before {
+  content: '';
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 11px;
+  left: 0px;
+  background-image: url(img/i8.png);
+  background-size: cover;
+  background-position: center;
 }
-.active{color: #888;
-text-decoration: line-through;}
-.active span{color: #bbb;}
+.active {
+  color: #888;
+  text-decoration: line-through;
+}
+.active span {
+  color: #bbb;
+}
 
 .active::before {
-    background-image: url(img/i9.1.png);
-  }
-li span{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 30px;
-    height: 30px;
-    font-size: 1.8em;
-    color: #bbb;
-    border-radius: 40px;
-    transition: 1s ease 0s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
+  background-image: url(img/i9.1.png);
 }
-#btn1{
-    float: right;
-    margin: 10px 0px;
-    border:none;
-    background-color:transparent;
-    text-decoration: underline;
-    font-size: 1.2em;
-  }
-  #msg{
-    text-align: center;
-    font-weight: 100;
-    opacity: 0.4;
+li span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  font-size: 1.8em;
+  color: #bbb;
+  border-radius: 40px;
+  transition: 1s ease 0s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+#btn1 {
+  float: right;
+  margin: 10px 0px;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  font-size: 1.2em;
+}
+#msg {
+  text-align: center;
+  font-weight: 100;
+  opacity: 0.4;
 }
 
-  /* responsive for tablets */
-  @media (max-width:1000px){
-    body{
-      background-position: right;
-    }
-    ul{cursor: auto;
-    }
-    main{
-      height: calc(100vh - 49vh);
-    }
-    #btn{
-      width: 23%;
-      padding: 9px;
-    }
-    
+/* responsive for tablets */
+@media (max-width: 1000px) {
+  body {
+    background-position: right;
   }
+  ul {
+    cursor: auto;
+  }
+  main {
+    height: calc(100vh - 49vh);
+  }
+  #btn {
+    width: 23%;
+    padding: 9px;
+  }
+}
 
 /* Responsive for mobile */
-@media (max-width:600px){
-  body{
-    background-position:left;
+@media (max-width: 600px) {
+  body {
+    background-position: left;
   }
-  .container{
+  .container {
     margin-top: 39px;
     padding: 22px;
   }
-  header h1{
+  header h1 {
     font-size: 2.3em;
-    background-image: linear-gradient(130deg,#6DD5FA,#2d84Be);
+    background-image: linear-gradient(130deg, #6dd5fa, #2d84be);
   }
-  .mid{
+  .mid {
     margin: 13px auto;
     width: 100%;
     font-size: 14px;
   }
-  .mid input{
+  .mid input {
     padding-left: 20px;
     font-size: 1.5em;
   }
-  #btn{
+  #btn {
     width: 30%;
     padding: 4.8px;
   }
-  ul{cursor: auto;}
-  ul li{
-    font-size: 1.690em;
+  ul {
+    cursor: auto;
+  }
+  ul li {
+    font-size: 1.69em;
     padding-left: 29px;
-  }  
-  #msg{
+  }
+  #msg {
     font-size: 1.38em;
   }
 }

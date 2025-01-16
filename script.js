@@ -51,6 +51,12 @@ $(function() {
        $('#inputItem').val('');
     });//end of btn click
 
+      $('#inputItem').keypress(function (e) {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            $('#btn').click(); // Trigger the button click
+        }
+    });
 
     $('ul').on('click',function(e){
         //if user chech or uncheck list item
