@@ -10,8 +10,8 @@
 
 body {
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
+  background-color: #165fd2;
   background-image: url(img/bg1.jpg);
   background-position: center;
   background-size: cover;
@@ -200,9 +200,10 @@ li span {
 }
 
 /* Responsive for mobile */
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   body {
     background-position: left;
+    height: 100vh;
   }
   .container {
     margin-top: 22px;
